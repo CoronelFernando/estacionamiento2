@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 class CajonController extends Controller
 {
     public function index(){
-
+        return view('welcome');
       }
     
       public function create(){

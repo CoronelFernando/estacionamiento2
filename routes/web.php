@@ -16,7 +16,7 @@ Route::get('/', function () {
 });
 
 //RUTAS USADAS PARA ADMINISTRADOR
-Route::get('administrador/home', 'PrincipalController@index');
+Route::get('home', 'CajonController@index');
 
 
 //RUTAS USADAS PARA USUARIOS
