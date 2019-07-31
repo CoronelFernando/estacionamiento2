@@ -10,6 +10,11 @@
         <div id="content-wrapper" class="d-flex flex-column">
             <div id="content">
                 @include('theme.header')
+                <div class="container-fluid">
+                    <footer class="sticky-footer bg-white">
+                    @include('theme.footer')
+                    </footer>
+                </div>
             </div>
         </div>
     </div>
