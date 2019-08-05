@@ -2,9 +2,7 @@
 <html lang="en">
 
 <head>
-
   @include('theme.head')
-
 </head>
 
 <body id="page-top">
@@ -19,6 +17,8 @@
         @include('theme.header')
         <!-- Begin Page Content -->
         <div class="container-fluid">
+            @section('content')
+            @yield('content')
         </div>
         <!-- /.container-fluid -->
       </div>
@@ -28,18 +28,14 @@
         @include('theme.footer')
       </footer>
       <!-- End of Footer -->
-
     </div>
     <!-- End of Content Wrapper -->
-
   </div>
   <!-- End of Page Wrapper -->
-
   <!-- Scroll to Top Button-->
   <a class="scroll-to-top rounded" href="#page-top">
     <i class="fas fa-angle-up"></i>
   </a>
-
   <!-- Logout Modal-->
   <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
@@ -75,6 +71,10 @@
   <!-- Page level custom scripts -->
   <script src="js/demo/chart-area-demo.js"></script>
   <script src="js/demo/chart-pie-demo.js"></script>
+
+    <!--js Layout-->
+    <script src="layout/js/herramientas.js"></script>
+    <script src="layout/js/mapas.js"></script>
 
 </body>
 
