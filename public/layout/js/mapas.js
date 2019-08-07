@@ -36,7 +36,7 @@ function parking(){
     var lineaAmarilla = lineasAmarillas('0.5%', '250px', 'lineaAmarilla' + i);
     container.appendChild(lineaAmarilla);
     //console.log(jsonData[i]);
-    var cajon = cajones('13.4%','250px', 'top');
+    var cajon = cajones('13.4%','250px','', 1, 'top');
     container.appendChild(cajon);
     if((nCajones - i) == 1){
       var lineaAmarilla = lineasAmarillas('0.5%', '250px', 'lineaAmarilla' + i);
