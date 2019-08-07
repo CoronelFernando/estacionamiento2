@@ -4,7 +4,7 @@
 //#FFFFFF blanco
 //#9E9E9E gris
 //#000000 negro
-var container = document.getElementById('contenedor');
+var container = document.getElementById('container');
 //contenedor.style.height = '100%';
 var ns = 'http://www.w3.org/2000/svg';
 
@@ -21,25 +21,25 @@ function svgs(){
 
 //FUNCION QUE GENERA UN CAJON
 //NOS RETORNA UN DIV
-function cajones(width, height, id, estado, orientacion){
-  var divCajon = document.createElement('div');
-  divCajon.id = id;
-  divCajon.style.width = width;
-  divCajon.style.height = height;
-  divCajon.style.float = 'left';
+function drawer(width, height, id, status, orientation){
+  var divDrawer = document.createElement('div');
+  divDrawer.id = id;
+  divDrawer.style.width = width;
+  divDrawer.style.height = height;
+  divDrawer.style.float = 'left';
   //divCajon.setAttribute('onClick', 'show(id),obtenerReservados(this)');
-  divCajon.setAttribute('onClick', 'show(id)');
+  divDrawer.setAttribute('onClick', 'show(id)');
   var svg = svgs();
-  var cajon = document.createElementNS(ns, 'rect');
-  cajon.setAttributeNS(null, 'width', '100%');
-  cajon.setAttributeNS(null, 'height', '100%');
-  if(estado == 1) cajon.setAttributeNS(null, 'fill', '#f0f5f9'); //verde/disponible
-  else if (estado == 2) cajon.setAttributeNS(null, 'fill', '#ff6b6b'); //rojo/no disponible
-  else if (estado == 3) cajon.setAttributeNS(null, 'fill', '#0984e3'); //Azul/no disponible
-  cajon.setAttributeNS(null, 'rx', '0');
-  cajon.setAttributeNS(null, 'ry', '0');
+  var drawer = document.createElementNS(ns, 'rect');
+  drawer.setAttributeNS(null, 'width', '100%');
+  drawer.setAttributeNS(null, 'height', '100%');
+  if(status == 1) drawer.setAttributeNS(null, 'fill', '#f0f5f9'); //verde/disponible
+  else if (status == 2) drawer.setAttributeNS(null, 'fill', '#ff6b6b'); //rojo/no disponible
+  else if (status == 3) drawer.setAttributeNS(null, 'fill', '#0984e3'); //Azul/no disponible
+  drawer.setAttributeNS(null, 'rx', '0');
+  drawer.setAttributeNS(null, 'ry', '0');
   svg.appendChild(cajon);
-  divCajon.appendChild(svg);
+  divDrawer.appendChild(svg);
   //divCajon.appendChild(logoCajon(estado, 'logo', orientacion));
 
   return divCajon;
