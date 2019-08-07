@@ -33,7 +33,7 @@ function cajones(width, height, id, estado, orientacion){
   var cajon = document.createElementNS(ns, 'rect');
   cajon.setAttributeNS(null, 'width', '100%');
   cajon.setAttributeNS(null, 'height', '100%');
-  if(estado == 1) cajon.setAttributeNS(null, 'fill', '#9E9E9E'); //verde/disponible
+  if(estado == 1) cajon.setAttributeNS(null, 'fill', '#f0f5f9'); //verde/disponible
   else if (estado == 2) cajon.setAttributeNS(null, 'fill', '#ff6b6b'); //rojo/no disponible
   else if (estado == 3) cajon.setAttributeNS(null, 'fill', '#0984e3'); //Azul/no disponible
   cajon.setAttributeNS(null, 'rx', '0');
@@ -78,7 +78,7 @@ function lineasAmarillas(width, height, id){
   var lineaAmarilla = document.createElementNS(ns, 'rect');
   lineaAmarilla.setAttributeNS(null, 'width', '100%');
   lineaAmarilla.setAttributeNS(null, 'height', '100%');
-  lineaAmarilla.setAttributeNS(null, 'fill', '#757575');
+  lineaAmarilla.setAttributeNS(null, 'fill', '#c9d6df');
   //lineaAmarilla.setAttributeNS(null, 'rx', '0');
   //lineaAmarilla.setAttributeNS(null, 'ry', '0');
   svg.appendChild(lineaAmarilla);

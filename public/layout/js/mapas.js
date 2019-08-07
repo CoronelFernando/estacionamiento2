@@ -27,10 +27,20 @@ function parking(){
   container.appendChild(edificios);
   var street1 = calles('5%', '200px', 'street', 'top');
   container.appendChild(street1);
-  var street2 = calles('100%', '30px', 'street0', 'top');
+  var street2 = calles('100%', '40px', 'street0', 'top');
   container.appendChild(street2);
+
+  //banquetita
+  //var streetx = calles('15%', '7px', 'streetx', 'top');
+  //container.appendChild(streetx);
+  //var line = lineasAmarillas('70%', '7px', 'line', 'top');
+  //container.appendChild(line);
+  //var streety = calles('15%', '7px', 'streety', 'top');
+  //container.appendChild(streety);
+
+    //dibujar cajones
   var street3 = calles('15%', '250px', 'street3', 'top');
-  container.appendChild(street3);
+  container.appendChild(street3); 
   var nCajones = 5;
   for (var i = 0; i < nCajones; i++) {
     var lineaAmarilla = lineasAmarillas('0.5%', '250px', 'lineaAmarilla' + i);
