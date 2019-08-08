@@ -33,7 +33,7 @@ function drawer(width, height, id, status, orientation){
   var drawer = document.createElementNS(ns, 'rect');
   drawer.setAttributeNS(null, 'width', '100%');
   drawer.setAttributeNS(null, 'height', '100%');
-  if(status == 1) drawer.setAttributeNS(null, 'fill', '#f0f5f9'); //verde/disponible
+  if(status == 1) drawer.setAttributeNS(null, 'fill', '#E4E4E4'); //verde/disponible
   else if (status == 2) drawer.setAttributeNS(null, 'fill', '#ff6b6b'); //rojo/no disponible
   else if (status == 3) drawer.setAttributeNS(null, 'fill', '#0984e3'); //Azul/no disponible
   drawer.setAttributeNS(null, 'rx', '0');
@@ -77,7 +77,7 @@ function lineasAmarillas(width, height, id){
   var lineaAmarilla = document.createElementNS(ns, 'rect');
   lineaAmarilla.setAttributeNS(null, 'width', '100%');
   lineaAmarilla.setAttributeNS(null, 'height', '100%');
-  lineaAmarilla.setAttributeNS(null, 'fill', '#c9d6df');
+  lineaAmarilla.setAttributeNS(null, 'fill', '#B9BDBE');
   //lineaAmarilla.setAttributeNS(null, 'rx', '0');
   //lineaAmarilla.setAttributeNS(null, 'ry', '0');
   svg.appendChild(lineaAmarilla);
@@ -99,7 +99,25 @@ function banquetas(width, height, id){
   var banqueta = document.createElementNS(ns, 'rect');
   banqueta.setAttributeNS(null, 'width', '100%');
   banqueta.setAttributeNS(null, 'height', '100%');
-  banqueta.setAttributeNS(null, 'fill', '#95a5a6');
+  banqueta.setAttributeNS(null, 'fill', '#B9BDBE');  
+  svg.appendChild(banqueta);
+  divbanqueta.appendChild(svg);
+
+  return divbanqueta;
+}
+
+function banqueta(width, height, id){
+  var divbanqueta = document.createElement('div');
+  divbanqueta.style.width = width;
+  divbanqueta.style.height = height;
+  divbanqueta.style.marginTop = '-7px';
+  divbanqueta.style.float = 'left'; 
+  divbanqueta.id = id;
+  var svg = svgs();
+  var banqueta = document.createElementNS(ns, 'rect');
+  banqueta.setAttributeNS(null, 'width', '100%');
+  banqueta.setAttributeNS(null, 'height', '100%');
+  banqueta.setAttributeNS(null, 'fill', '#EBEFF2');  
   svg.appendChild(banqueta);
   divbanqueta.appendChild(svg);
 
@@ -116,7 +134,7 @@ function edificio(width, height, id){
   var edificio = document.createElementNS(ns, 'rect');
   edificio.setAttributeNS(null, 'width', '100%');
   edificio.setAttributeNS(null, 'height', '100%');
-  edificio.setAttributeNS(null, 'fill', '#efecec');
+  edificio.setAttributeNS(null, 'fill', '#E4E4E4');
   svg.appendChild(edificio);
   divedificio.appendChild(svg);
 
@@ -136,7 +154,7 @@ function calles(width, height, id, estado){
   var calle = document.createElementNS(ns, 'rect');
   calle.setAttributeNS(null, 'width', '100%');
   calle.setAttributeNS(null, 'height', '100%');
-  calle.setAttributeNS(null, 'fill', '#34495e');
+  calle.setAttributeNS(null, 'fill', '#b0bec5');
   svg.appendChild(calle);
   divCalles.appendChild(svg);
 
