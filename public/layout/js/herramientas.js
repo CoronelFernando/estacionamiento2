@@ -38,11 +38,10 @@ function drawer(width, height, id, status, orientation){
   else if (status == 3) drawer.setAttributeNS(null, 'fill', '#0984e3'); //Azul/no disponible
   drawer.setAttributeNS(null, 'rx', '0');
   drawer.setAttributeNS(null, 'ry', '0');
-  svg.appendChild(cajon);
+  svg.appendChild(drawer);
   divDrawer.appendChild(svg);
   //divCajon.appendChild(logoCajon(estado, 'logo', orientacion));
-
-  return divCajon;
+  return divDrawer;
 }
 
 //FUNCION QUE GENERA EL LOGO DEL CAJON
@@ -93,7 +92,8 @@ function banquetas(width, height, id){
   var divbanqueta = document.createElement('div');
   divbanqueta.style.width = width;
   divbanqueta.style.height = height;
-  divbanqueta.style.float = 'left';
+  divbanqueta.style.marginTop = '-7px';
+  divbanqueta.style.float = 'left'; 
   divbanqueta.id = id;
   var svg = svgs();
   var banqueta = document.createElementNS(ns, 'rect');

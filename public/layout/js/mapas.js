@@ -17,7 +17,7 @@ function obtenerCajones(){
 parking();
 
 function parking(){
-  document.getElementById('contenedor').innerHTML = '';
+  document.getElementById('container').innerHTML = '';
   //Edificio
   var street0 = calles('100%', '20px', 'street0', 'top');
   container.appendChild(street0);
@@ -31,9 +31,9 @@ function parking(){
   container.appendChild(street2);
 
   //banquetita
-  //var streetx = calles('15%', '7px', 'streetx', 'top');
-  //container.appendChild(streetx);
-  //var line = lineasAmarillas('70%', '7px', 'line', 'top');
+  var streetx = banquetas('100%', '12px', 'streetx');
+  container.appendChild(streetx);
+  //var line = banquetas('70%', '7px', 'line', 0);
   //container.appendChild(line);
   //var streety = calles('15%', '7px', 'streety', 'top');
   //container.appendChild(streety);
@@ -46,8 +46,8 @@ function parking(){
     var lineaAmarilla = lineasAmarillas('0.5%', '250px', 'lineaAmarilla' + i);
     container.appendChild(lineaAmarilla);
     //console.log(jsonData[i]);
-    var cajon = cajones('13.4%','250px','', 1, 'top');
-    container.appendChild(cajon);
+    var Drawer = drawer('13.4%','250px','', 1, 'top');
+    container.appendChild(Drawer);
     if((nCajones - i) == 1){
       var lineaAmarilla = lineasAmarillas('0.5%', '250px', 'lineaAmarilla' + i);
       container.appendChild(lineaAmarilla);
