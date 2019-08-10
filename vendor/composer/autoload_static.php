@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit88c05319079ff1ecf110da7743653578
+class ComposerStaticInitf6b9ccec023fae07894b72751d46074f
 {
     public static $files = array (
         '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
@@ -303,9 +303,9 @@ class ComposerStaticInit88c05319079ff1ecf110da7743653578
 
     public static $classMap = array (
         'App\\Cajon' => __DIR__ . '/../..' . '/app/Cajon.php',
-        'App\\Configuracion' => __DIR__ . '/../..' . '/app/Configuracion.php',
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\EstadisticaCajon' => __DIR__ . '/../..' . '/app/EstadisticaCajon.php',
+        'App\\EstadisticaReservado' => __DIR__ . '/../..' . '/app/EstadisticaReservado.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
         'App\\Http\\Controllers\\Auth\\ForgotPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ForgotPasswordController.php',
         'App\\Http\\Controllers\\Auth\\LoginController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/LoginController.php',
@@ -316,6 +316,7 @@ class ComposerStaticInit88c05319079ff1ecf110da7743653578
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
         'App\\Http\\Controllers\\EstadisticaCajonController' => __DIR__ . '/../..' . '/app/Http/Controllers/EstadisticaCajonController.php',
         'App\\Http\\Controllers\\PisoController' => __DIR__ . '/../..' . '/app/Http/Controllers/PisoController.php',
+        'App\\Http\\Controllers\\PrincipalController' => __DIR__ . '/../..' . '/app/Http/Controllers/PrincipalController.php',
         'App\\Http\\Controllers\\ReporteController' => __DIR__ . '/../..' . '/app/Http/Controllers/ReporteController.php',
         'App\\Http\\Controllers\\ReservadoController' => __DIR__ . '/../..' . '/app/Http/Controllers/ReservadoController.php',
         'App\\Http\\Controllers\\SeccionController' => __DIR__ . '/../..' . '/app/Http/Controllers/SeccionController.php',
@@ -327,7 +328,6 @@ class ComposerStaticInit88c05319079ff1ecf110da7743653578
         'App\\Http\\Middleware\\RedirectIfAuthenticated' => __DIR__ . '/../..' . '/app/Http/Middleware/RedirectIfAuthenticated.php',
         'App\\Http\\Middleware\\TrimStrings' => __DIR__ . '/../..' . '/app/Http/Middleware/TrimStrings.php',
         'App\\Http\\Middleware\\VerifyCsrfToken' => __DIR__ . '/../..' . '/app/Http/Middleware/VerifyCsrfToken.php',
-        'App\\Piso' => __DIR__ . '/../..' . '/app/Piso.php',
         'App\\Providers\\AppServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AppServiceProvider.php',
         'App\\Providers\\AuthServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AuthServiceProvider.php',
         'App\\Providers\\BroadcastServiceProvider' => __DIR__ . '/../..' . '/app/Providers/BroadcastServiceProvider.php',
@@ -339,7 +339,6 @@ class ComposerStaticInit88c05319079ff1ecf110da7743653578
         'App\\Status' => __DIR__ . '/../..' . '/app/Status.php',
         'App\\TiempoReservado' => __DIR__ . '/../..' . '/app/TiempoReservado.php',
         'App\\User' => __DIR__ . '/../..' . '/app/User.php',
-        'App\\Usuario' => __DIR__ . '/../..' . '/app/Usuario.php',
         'ArithmeticError' => __DIR__ . '/..' . '/symfony/polyfill-php70/Resources/stubs/ArithmeticError.php',
         'AssertionError' => __DIR__ . '/..' . '/symfony/polyfill-php70/Resources/stubs/AssertionError.php',
         'Carbon\\Carbon' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Carbon.php',
@@ -365,6 +364,7 @@ class ComposerStaticInit88c05319079ff1ecf110da7743653578
         'DeepCopy\\DeepCopy' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/DeepCopy.php',
         'DeepCopy\\Exception\\CloneException' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/Exception/CloneException.php',
         'DeepCopy\\Exception\\PropertyException' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/Exception/PropertyException.php',
+        'DeepCopy\\Filter\\ChainableFilter' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/Filter/ChainableFilter.php',
         'DeepCopy\\Filter\\Doctrine\\DoctrineCollectionFilter' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/Filter/Doctrine/DoctrineCollectionFilter.php',
         'DeepCopy\\Filter\\Doctrine\\DoctrineEmptyCollectionFilter' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/Filter/Doctrine/DoctrineEmptyCollectionFilter.php',
         'DeepCopy\\Filter\\Doctrine\\DoctrineProxyFilter' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/Filter/Doctrine/DoctrineProxyFilter.php',
@@ -381,7 +381,6 @@ class ComposerStaticInit88c05319079ff1ecf110da7743653578
         'DeepCopy\\TypeFilter\\Date\\DateIntervalFilter' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/TypeFilter/Date/DateIntervalFilter.php',
         'DeepCopy\\TypeFilter\\ReplaceFilter' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/TypeFilter/ReplaceFilter.php',
         'DeepCopy\\TypeFilter\\ShallowCopyFilter' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/TypeFilter/ShallowCopyFilter.php',
-        'DeepCopy\\TypeFilter\\Spl\\SplDoublyLinkedList' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/TypeFilter/Spl/SplDoublyLinkedList.php',
         'DeepCopy\\TypeFilter\\Spl\\SplDoublyLinkedListFilter' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/TypeFilter/Spl/SplDoublyLinkedListFilter.php',
         'DeepCopy\\TypeFilter\\TypeFilter' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/TypeFilter/TypeFilter.php',
         'DeepCopy\\TypeMatcher\\TypeMatcher' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/TypeMatcher/TypeMatcher.php',
@@ -3477,11 +3476,11 @@ class ComposerStaticInit88c05319079ff1ecf110da7743653578
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit88c05319079ff1ecf110da7743653578::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit88c05319079ff1ecf110da7743653578::$prefixDirsPsr4;
-            $loader->fallbackDirsPsr4 = ComposerStaticInit88c05319079ff1ecf110da7743653578::$fallbackDirsPsr4;
-            $loader->prefixesPsr0 = ComposerStaticInit88c05319079ff1ecf110da7743653578::$prefixesPsr0;
-            $loader->classMap = ComposerStaticInit88c05319079ff1ecf110da7743653578::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInitf6b9ccec023fae07894b72751d46074f::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInitf6b9ccec023fae07894b72751d46074f::$prefixDirsPsr4;
+            $loader->fallbackDirsPsr4 = ComposerStaticInitf6b9ccec023fae07894b72751d46074f::$fallbackDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInitf6b9ccec023fae07894b72751d46074f::$prefixesPsr0;
+            $loader->classMap = ComposerStaticInitf6b9ccec023fae07894b72751d46074f::$classMap;
 
         }, null, ClassLoader::class);
     }
