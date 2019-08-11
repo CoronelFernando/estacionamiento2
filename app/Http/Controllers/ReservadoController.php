@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 class ReservadoController extends Controller
 {
     public function index(){
-
+        return view('pagesweb/administrator/reserved');
     }
   
     public function create(){
