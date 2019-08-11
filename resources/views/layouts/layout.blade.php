@@ -75,7 +75,6 @@
     <!--js Layout-->
     <script src="layout/js/herramientas.js"></script>
     <script src="layout/js/mapas.js"></script>
-
 </body>
 
 </html>

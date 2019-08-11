@@ -20,3 +20,7 @@
 Route::get('/', 'PrincipalController@index');
 Route::get('home', 'PrincipalController@index');
 
+
+//Estadisticas
+//Route::get('/', 'EstadisticaCajonController@index');
+Route::get('estadisticas', 'EstadisticaCajonController@index');

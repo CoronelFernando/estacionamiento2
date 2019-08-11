@@ -4,7 +4,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>SB Admin 2 - Dashboard</title>
+  <title>Smart Parking</title>
 
   <!-- Custom fonts for this template-->
   <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -15,3 +15,6 @@
 
   <!--Style Layout-->
   <link href="layout/css/herramientas.css" rel="stylesheet">
+
+  <!--style toggle Switch button-->
+  <link href="toggleSwitch/style.css" rel="stylesheet">
