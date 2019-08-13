@@ -25,5 +25,10 @@ Route::get('home', 'PrincipalController@index');
 //Route::get('/', 'EstadisticaCajonController@index');
 Route::get('estadisticas', 'EstadisticaCajonController@index');
 
-//Reservados
+
+//Reservaciones 
 Route::get('reservados', 'ReservadoController@index');
+
+//Configuraciones
+Route::get('configuracion', 'ConfiguracionController@index');
+

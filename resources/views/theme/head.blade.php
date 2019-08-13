@@ -17,4 +17,5 @@
   <link href="layout/css/herramientas.css" rel="stylesheet">
 
   <!--style toggle Switch button-->
-  <link href="toggleSwitch/style.css" rel="stylesheet">
+  <!--<link href="toggleSwitch/style.css" rel="stylesheet">-->
+  <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">

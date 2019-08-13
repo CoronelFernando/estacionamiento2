@@ -73,8 +73,11 @@
   <script src="js/demo/chart-pie-demo.js"></script>
 
     <!--js Layout-->
-    <script src="layout/js/herramientas.js"></script>
-    <script src="layout/js/mapas.js"></script>
+  <script src="layout/js/herramientas.js"></script>
+  <script src="layout/js/mapas.js"></script>
+
+  <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
+
 </body>
 
 </html>
