@@ -39,8 +39,14 @@ function drawer(width, height, id, status, orientation){
   drawer.setAttributeNS(null, 'rx', '0');
   drawer.setAttributeNS(null, 'ry', '0');
   svg.appendChild(drawer);
-  divDrawer.appendChild(svg);
-  //divCajon.appendChild(logoCajon(estado, 'logo', orientacion));
+  svg.appendChild(drawCarLayout(id, '#FF0000', new Point(20,50)));
+  svg.appendChild(drawPrincipalGlass('top', new Point(20,50)));
+  svg.appendChild(drawPrincipalGlass('bottom', new Point(20,50)));
+  svg.appendChild(drawLateralGlass('left', new Point(20,50)));
+  svg.appendChild(drawLateralGlass('right', new Point(20,50)));
+  drawFrontLights(svg,new Point(20,50));
+  divDrawer.appendChild(svg, new Point(20,50));
+  //divDrawer.appendChild(iconCar('prueba','#FFFF00',new Point(100,100),'100px','100px'));
   return divDrawer;
 }
 
@@ -61,6 +67,25 @@ function logoCajon(estado, id, orientacion){
   divLogoCajon.appendChild(image);
 
   return divLogoCajon;
+}
+
+function iconCar(id, color, startPoint, width, height,){
+  var divIconCar = document.createElement('div');
+  divIconCar.style.width = width;
+  divIconCar.style.height = height;
+  divIconCar.style.float = 'left';
+  var svg = svgs();
+  svg.appendChild(drawCarLayout(id, color, startPoint));
+  svg.appendChild(drawPrincipalGlass('top', startPoint));
+  svg.appendChild(drawPrincipalGlass('bottom',startPoint));
+  svg.appendChild(drawLateralGlass('left', startPoint));
+  svg.appendChild(drawLateralGlass('right',startPoint));
+  drawFrontLights(svg,startPoint);
+
+  divIconCar.appendChild(svg);
+
+  return divIconCar;
+
 }
 
 //FUNCION QUE GENERA LAS LINEAS AMARILAS
@@ -198,4 +223,128 @@ function lineasPunteadas(width, height, id){
   divLineaPunteada.appendChild(svg);
 
   return divLineaPunteada;
+}
+
+//--------------------------------------------------------------------------------------------------
+//ICONO CAJON
+//--------------------------------------------------------------------------------------------------
+
+//FUNCION QUE DIBUJA EL LAYOUT DEL AUTO
+//@id INDICA EL ID DEL AUTO
+//@color INDICA EL COLOR DEL AUTO
+//@startPoint INDICA EL PUNTO DONDE SE VA A EMPEZAR A DIBUJAR
+function drawCarLayout(id,color, startPoint){
+  var carLayout = document.createElementNS(ns, 'path');
+  carLayout.id = id;
+  carLayout.style.fill = color;
+
+  var path = 'M' + startPoint.x + ',' + startPoint.y; + ' '; // INICIA
+  path += 'A3,1 0 0,1 ' + (startPoint.x + 100) + ',' + startPoint.y + ' '; // DERECHA SE CREA ARCO
+  path += 'L ' + (startPoint.x + 100) + ',' + (startPoint.y + 35) + ' '; // BAJA
+  path += 'L ' + (startPoint.x + 110) + ',' + (startPoint.y + 35) + ' '; // DERECHA SE CREA ESPEJO RETROVISOR
+  path += 'L ' + (startPoint.x + 110) + ',' + (startPoint.y + 40) + ' '; // BAJA SE CREA ESPEJO RETROVISOR
+  path += 'L ' + (startPoint.x + 100) + ',' + (startPoint.y + 40) + ' '; // IZQUIERDA SE CREA ESPEJO RETROVISOR
+  path += 'L ' + (startPoint.x + 100) + ',' + (startPoint.y + 130) + ' '; // BAJA
+  path += 'A3,1 0 1,1  ' + startPoint.x + ',' + (startPoint.y + 130) + ' '; // IZQUIERA SE CREA ARCO
+  path += 'L ' + (startPoint.x) + ',' + (startPoint.y + 35) + ' '; // SUBE
+  path += 'L ' + (startPoint.x - 10) + ',' + (startPoint.y + 35) + ' '; // IZQUIERDA SE CREA ESPEJO RETROVISOR
+  path += 'L ' + (startPoint.x - 10) + ',' + (startPoint.y + 40) + ' '; // SUBE SE CREA ESPEJO RETROVISOR
+  path += 'L ' + (startPoint.x) + ',' + (startPoint.y + 40) + ' Z'; // DERECHA SE CREA ESPEJO RETROVISOR
+  
+  carLayout.setAttribute('d', path);
+
+  return carLayout;
+}
+
+//FUNCION QUE DIBUJA LAS VENTANASPRINCIPALES DEL AUTO
+//@orientacion INDICA HACIA DONDE ESTA MIRANDO EL AUTO
+//@startPoint INDICA EL PUNTO DONDE SE VA A EMPEZAR A DIBUJAR
+function drawPrincipalGlass(orientacion, startPoint){
+  var principalGlass = document.createElementNS(ns, 'path');
+  principalGlass.style.fill = '#000';
+  //principalGlass.id = id;
+  var path = '';
+  if(orientacion == 'top'){
+      //path = 'M120,140 A3,1 0 0,1 180,140 L170,155 L130,155 Z';
+      path = 'M' + (startPoint.x + 21) + ',' + (startPoint.y + 40) + ' ';
+      path += 'A3,1 0 0,1 ' + (startPoint.x + 81) + ',' + (startPoint.y + 40) + ' ';
+      path += 'L' + (startPoint.x + 71) + ',' + (startPoint.y + 55) +  '';
+      path += 'L' + (startPoint.x + 31) + ',' + (startPoint.y + 55) +  ' Z';
+  }
+  
+  if(orientacion == 'bottom'){
+      //path = 'M120,220 A3,1 0 1,0 180,220 L170,205 L130,205 Z';
+      path = 'M' + (startPoint.x + 21) + ',' + (startPoint.y + 120) + ' ';
+      path += 'A3,1 0 1,0 ' + (startPoint.x + 82) + ',' + (startPoint.y + 120) + ' ';
+      path += 'L' + (startPoint.x + 71) + ',' + (startPoint.y + 105) +  '';
+      path += 'L' + (startPoint.x + 31) + ',' + (startPoint.y + 105) +  ' Z';
+  }
+
+  principalGlass.setAttribute('d', path);
+
+  return principalGlass;
+}
+
+//FUNCION QUE DIBUJA LAS VENTANAS LATERALES DEL AUTO
+//@orientacion INDICA HACIA DONDE ESTA MIRANDO EL AUTO
+//@startPoint INDICA EL PUNTO DONDE SE VA A EMPEZAR A DIBUJAR
+function drawLateralGlass(orientacion, startPoint){
+  var lateralGlass = document.createElementNS(ns, 'path');
+  lateralGlass.style.fill = '#000';
+  //principalGlass.id = id;
+  var path = '';
+  if(orientacion == 'left'){
+      //path = 'M185,155 L185,205 L175,200 L175,160 Z';
+      path = 'M' + (startPoint.x + 86) + ',' + (startPoint.y + 55) + ' '; // INICIA
+      path += 'L' + (startPoint.x + 86) + ',' + (startPoint.y + 105) + ' '; // BAJA
+      path += 'L' + (startPoint.x + 76) + ',' + (startPoint.y + 95) + ' '; // IZQUIERDA
+      path += 'L' + (startPoint.x + 76) + ',' + (startPoint.y + 65) + ' Z'; // SUBE
+  }
+  
+  if(orientacion == 'right'){
+      //path = 'M115,155 L115,205 L125,200 L125,160 Z';
+      //path = 'M' + (startPoint.x + 15) + ',' + (startPoint.y + 55) + ' L115,205 L125,200 L125,160 Z';
+      path = 'M' + (startPoint.x + 16) + ',' + (startPoint.y + 55) + ' '; // INICIA
+      path += 'L' + (startPoint.x + 16) + ',' + (startPoint.y + 105) + ' '; // BAJA
+      path += 'L' + (startPoint.x + 26) + ',' + (startPoint.y + 95) + ' '; // DERECHA
+      path += 'L' + (startPoint.x + 26) + ',' + (startPoint.y + 65) + ' Z'; // SUBE
+  }
+  
+  lateralGlass.setAttribute('d', path);
+
+  return lateralGlass;
+}
+
+// FUNCION QUE DIBUJA LAS LUCES DELANTERAS DEL AUTO
+//@svg RECIBE EL SBG DONDE SE VA A DIBUJAR
+//@startPoint INDICA EL PUNTO DONDE SE VA A EMPEZAR A DIBUJAR
+function drawFrontLights(svg,startPoint){
+
+  var x = startPoint.x + 15;
+
+  for(var i = 0; i < 2; i++){
+      var frontLightsLeft = document.createElementNS(ns, 'path');
+      frontLightsLeft.style.fill = '#FFFF00';
+      var path = '';
+      path = 'M' + (x) + ',' + (startPoint.y - 10) + ' ';
+      path += 'h10 ';
+      path += 'a5,5 0 0 1 2,2 ';
+      path += 'v5 ';
+      path += 'a5,5 0 0 1 -2,2 ';
+      path += 'h-10 ';
+      path += 'a5,5 0 0 1 -2,-2 ';
+      path += 'v-5 ';
+      path += 'a5,5 0 0 1 2,-2 z';
+  
+      frontLightsLeft.setAttribute('d', path);
+    
+      svg.append(frontLightsLeft);
+      
+      x += 60;
+  }
+}
+
+function Point(x, y) {
+if (typeof x !== 'undefined') this.x = x;
+if (typeof y !== 'undefined') this.y = y;
 }
